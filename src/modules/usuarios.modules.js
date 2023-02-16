@@ -25,7 +25,7 @@ const Schema = new mongoose.Schema({
       required: true
     },
     age: {
-      type: int,
+      type: Number,
       required: true
     },
     phone: {

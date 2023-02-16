@@ -10,7 +10,8 @@ export class UsuarioDao {
     
     async createUser(object) {
         try {
-            if (object.photo && typeof object.photos === 'String') {
+            if (object.photo && typeof object.photo === 'string') {
+                console.log(object) //console.log(object)
                 return await UsuariosModel.create(object);
             }
         } catch (error) {
