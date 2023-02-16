@@ -2,6 +2,7 @@ import "../config/db.js";
 import { UsuariosModel } from "../modules/usuarios.modules.js";
 import logger from "../loggers/Log4jsLogger.js";
 
+
 export class UsuarioDao {
 
     ID_FIELD = "_id";
@@ -9,12 +10,15 @@ export class UsuarioDao {
     
     async createUser(object) {
         try {
-            return await UsuariosModel.create(object);
+            if (object.photo && typeof object.photos === 'String') {
+                return await UsuariosModel.create(object);
+            }
         } catch (error) {
             logger.error(error);
             return null;
         }
     }
+    
     
     async loginUser(object) {
         try {

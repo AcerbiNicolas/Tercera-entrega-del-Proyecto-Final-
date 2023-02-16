@@ -7,3 +7,4 @@
 - Recibimos un correo electrónico informando el UUID y fecha en la que se ha generado este usuario.
 
 <img src="../Entrega-18/imagesreadme/emailExample.png" alt="Nuevo usuaro email ejemplo"/>
+

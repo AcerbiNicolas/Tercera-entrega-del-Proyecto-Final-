@@ -19,8 +19,23 @@ const Schema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    adress: {
+      type: String,
+      required: true
+    },
+    age: {
+      type: int,
+      required: true
+    },
+    phone: {
+      type: String,
+      required: true
+    },
+    photo: {
+      type: String,
+      required: true
     }
-    
 });
 
 Schema.pre("save", function (next) {
